@@ -1,0 +1,44 @@
+
+==== BUT ====
+    Une application qui prend en param le nom du dossier qui contient les images, 
+    et pour chacune des images va récupérer les informations.
+
+    Donc 2 params:
+        - le dossier / fichier d'entrée 
+        - le dossier de sortie
+        ==> TJRS 2 params
+
+
+==== Ce qu'il y a dans l'index. ====
+    ==> Pas de nom, déjà stocké dans l'image
+    - width : int
+    - height : int
+    - grayHistogram : array 255 values
+    - redHistogram : array 255 values
+    - greenHistogram : array 255 values
+    - blueHistogram : array 255 values
+    - redRatio : double, 0 < r < 1 
+    - greenRatio : double, 0 < r < 1 
+    - blueRatio : double, 0 < r < 1 
+    - averageColor : int (hexa)
+    - gradientNormMean : double # Pour témoigner de zone texturée ou non (pas suffisant)
+    - gradientNormMinX
+    - gradientNormMaxX
+    - gradientNormMinY
+    - gradientNormMaxY
+    X - outlines : tableau de pixels # NON, trop gros
+    - nbOutlinePixels : int
+    - isRGB : bool # false == greyscale
+
+
+==== Idées pour la similarité d'images ====
+    - déjà, avec e batta machin truc ==> distance d'histogrammes
+    - puis, why not, avec une distance de couleurs (couleur moyenne)
+
+
+==== Images texturées ====
+    - Gradient Norm Mean ==> Pas suffisant
+    - On peut récupérer la zone texturée 
+        - coords rectangles
+    - On peut utiliser le nombre de pixels
+    - Centre de gravité des pixels

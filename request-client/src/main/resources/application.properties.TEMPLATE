@@ -1,0 +1,6 @@
+
+oracledb.username=Y2022M2_CIBULKA
+oracledb.password=M123456M
+oracledb.ip=10.40.128.30
+oracledb.port=1521
+oracledb.sid=orcl
